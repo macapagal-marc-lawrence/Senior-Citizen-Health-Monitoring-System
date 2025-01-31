@@ -149,3 +149,46 @@
                     </tbody>
                 </table>
             </div>
+
+            <div class="table-responsive">
+                <table class="table table-hover table-bordered align-middle">
+                    <thead class="table-primary">
+                    <tr>
+                <th>Senior Name</th>
+                <th>Health Condition</th>
+                <th>Description</th>
+                <th>Temperature</th>
+                <th>Blood Preassure</th>
+                <th>Heart Rate</th>
+                <th>Recorded By</th>
+                <th>Record Date</th>
+
+                   </tr>
+                    </thead>
+                    <tbody>
+                    <?php foreach ($healthHistory as $health): ?>
+                <tr>
+                    <td><?= esc($health['senior_name']) ?></td>
+                    <td><?= esc($health['health_condition']) ?></td>
+                    <td><?= esc($health['description']) ?></td>
+                    <td><?= esc($health['temperature']) ?> °C</td>
+                    <td><?= esc($health['blood_pressure']) ?> mmHg</td>
+                    <td><?= esc($health['heart_rate']) ?> bpm</td>
+                    <td><?= esc($health['recorded_by_name']) ?></td>
+                    <td><?= esc($health['record_date']) ?></td>
+                </tr>
+            <?php endforeach; ?>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="mt-3">
+                <a href="/admin/adminDashboard" class="btn btn-primary">
+                <i class="bi bi-arrow-left-circle icon"></i>Back to Dashboard</a>
+            </div>
+        </main>
+    </div>
+</div>
+
+
+<?= $this->endSection() ?>
