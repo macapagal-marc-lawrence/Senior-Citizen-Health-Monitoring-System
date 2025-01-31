@@ -128,3 +128,7 @@
         <main class="main-content col-md-9 ms-sm-auto col-lg-10 px-4">
             <h1 class="h2 text-primary text-center">Health Reports</h1>
             <p class="text-muted text-center">Review health data submitted by caregivers for each senior citizen.</p>
+
+            <div class="table-responsive">
+                <table class="table table-hover table-bordered align-middle">
+                    <thead class="table-primary">
