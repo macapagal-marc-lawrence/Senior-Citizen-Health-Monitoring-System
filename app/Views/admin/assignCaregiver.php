@@ -68,5 +68,36 @@
         margin-right: 8px;
         color: #4a5568;
     }
-    
+
+    .alert {
+        transition: opacity 0.5s ease;
+    }
+
+    .alert.hide {
+        opacity: 0;
+        visibility: hidden;
+    }
 </style>
+
+<?= $this->extend('layouts/frontend') ?>
+
+<?= $this->section('content') ?>
+
+<div class="container"> 
+    <div class="card shadow-lg">
+        <h2 class="text-center mb-4"><i class="bi bi-people-fill icon"></i>Assign Caregiver</h2>
+
+        <?php if (session()->getFlashdata('error')): ?>
+            <div class="alert alert-danger" id="flashMessage">
+                <?= session()->getFlashdata('error') ?>
+            </div>
+        <?php endif; ?>
+        <?php if (session()->getFlashdata('success')): ?>
+            <div class="alert alert-success" id="flashMessage">
+                <?= session()->getFlashdata('success') ?>
+            </div>
+        <?php endif; ?>
+
+    </div>
+
+</div>
