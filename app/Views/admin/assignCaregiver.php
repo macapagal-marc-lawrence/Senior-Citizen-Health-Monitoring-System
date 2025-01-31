@@ -118,8 +118,29 @@
                     <?php endforeach; ?>
                 </select>
             </div>
+        
+            <div class="d-flex justify-content-between mt-4">
+                <button type="submit" class="btn btn-success">
+                    <i class="bi bi-check-circle-fill icon"></i>Assign Caregiver
+                </button>
+                <a href="<?= site_url('/admin/adminDashboard') ?>" class="btn btn-primary">
+                    <i class="bi bi-arrow-left-circle icon"></i>Back to Dashboard
+                </a>
+            </div>
         </form>
 
     </div>
 
 </div>
+
+<script>
+    setTimeout(function() {
+        const flashMessage = document.getElementById('flashMessage');
+        flashMessage.classList.add('hide');
+    }, 3000);
+</script>
+
+<?= $this->endSection() ?>
+
+
+<?= $this->endSection() ?>
