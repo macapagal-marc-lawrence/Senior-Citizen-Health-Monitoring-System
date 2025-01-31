@@ -1,11 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
+<!-- Header Section with Logout Button -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="#">Caregiver Dashboard</a>
+        <div class="ml-auto">
+            <span class="navbar-text center">
+                Welcome, Caregiver- <?= esc($user['name']) ?>
+            </span>
+            <a href="<?= site_url('/login') ?>" class="btn btn-danger ml-3">
+                <i class="fas fa-sign-out-alt"></i> Logout
+            </a>
+        </div>
+    </div>
+</nav>
+
+
+<div class="container mt-5">
+        <h2 class="text-center mb-4">Caregiver Dashboard</h2>
+
+        <?php if (session()->getFlashdata('message')): ?>
+        <div class="alert alert-success" id="flashMessage">
+            <?= session()->getFlashdata('message') ?>
+        </div>
