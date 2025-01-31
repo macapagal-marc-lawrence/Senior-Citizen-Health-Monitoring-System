@@ -46,4 +46,149 @@
     .sidebar:hover .nav-link i {
         transform: scale(1.1);
     }
+
+    .main-content {
+        margin-left: 70px;
+        padding: 20px;
+        transition: margin-left 0.3s;
+        background-color: #f7fafc;
+        min-height: 100vh;
+    }
+    .sidebar:hover ~ .main-content {
+        margin-left: 220px;
+    }
+
+    .card {
+        background: #ffffff;
+        border: none;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .table-primary {
+        background-color: #f0f4f8;
+        color: #2a4365;
+    }
+    .table-hover tbody tr:hover {
+        background-color: #e3e7ea;
+    }
+
+    .table-responsive {
+        margin-top: 20px;
+    }
+    .icon {
+        margin-right: 8px;
+        
+    }
 </style>
+
+<div class="container-fluid">
+    <div class="row">
+
+    <nav class="sidebar">
+            <div class="sidebar-sticky p-3">
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-3">
+                        <a class="nav-link d-flex align-items-center" href="/admin/adminDashboard">
+                            <i class="bi bi-house-door"></i> <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item mb-3">
+                        <a class="nav-link d-flex align-items-center" href="/admin/healthReports">
+                            <i class="bi bi-heart"></i> <span>Health Reports</span>
+                        </a>
+                    </li>
+                    <li class="nav-item mb-3">
+                        <a class="nav-link d-flex align-items-center" href="/admin/medicationReports">
+                            <i class="bi bi-capsule"></i> <span>Medication Reports</span>
+                        </a>
+                    </li>
+                    <li class="nav-item mb-3">
+                        <a class="nav-link active d-flex align-items-center" href="/admin/medicationHistory">
+                        <i class="bi bi-clock-history"></i> <span>Medical History</span>
+                        </a>
+                    </li>
+                    <li class="nav-item mb-3">
+                        <a class="nav-link d-flex align-items-center" href="/login">
+                            <i class="bi bi-box-arrow-right"></i> <span>Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <main class="main-content col-md-9 ms-sm-auto col-lg-10 px-4">
+            <h1 class="h2 text-primary text-center">Health & Medication History</h1>
+            <p class="text-muted text-center">Review Health and Medication History submitted by caregivers for each senior citizen.</p>
+            
+            <div class="table-responsive">
+                <table class="table table-hover table-bordered align-middle">
+                    <thead class="table-primary">
+                    <tr>
+                <th>Senior Name</th>
+                <th>Medication Name</th>
+                <th>Prescribed By</th>
+                <th>Dosage</th>
+                <th>Date Prescribed</th>
+                   </tr>
+                    </thead>
+                    <tbody>
+                    <?php foreach ($medicationHistory as $history): ?>
+                <tr>
+                    <td><?= esc($history['senior_name']) ?></td>
+                    <td><?= esc($history['medication_name']) ?></td>
+                    <td><?= esc($history['prescribed_by_name']) ?></td>
+                    <td><?= esc($history['dosage']) ?></td>
+                    <td><?= esc($history['date_prescribed']) ?></td>
+                </tr>
+            <?php endforeach; ?>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table table-hover table-bordered align-middle">
+                    <thead class="table-primary">
+                    <tr>
+                <th>Senior Name</th>
+                <th>Health Condition</th>
+                <th>Description</th>
+                <th>Temperature</th>
+                <th>Blood Preassure</th>
+                <th>Heart Rate</th>
+                <th>Recorded By</th>
+                <th>Record Date</th>
+
+                   </tr>
+                    </thead>
+                    <tbody>
+                    <?php foreach ($healthHistory as $health): ?>
+                <tr>
+                    <td><?= esc($health['senior_name']) ?></td>
+                    <td><?= esc($health['health_condition']) ?></td>
+                    <td><?= esc($health['description']) ?></td>
+                    <td><?= esc($health['temperature']) ?> °C</td>
+                    <td><?= esc($health['blood_pressure']) ?> mmHg</td>
+                    <td><?= esc($health['heart_rate']) ?> bpm</td>
+                    <td><?= esc($health['recorded_by_name']) ?></td>
+                    <td><?= esc($health['record_date']) ?></td>
+                </tr>
+            <?php endforeach; ?>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="mt-3">
+                <a href="/admin/adminDashboard" class="btn btn-primary">
+                <i class="bi bi-arrow-left-circle icon"></i>Back to Dashboard</a>
+            </div>
+        </main>
+    </div>
+</div>
+
+
+<?= $this->endSection() ?>

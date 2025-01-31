@@ -12,3 +12,22 @@
         </div>
     </div>
 </nav>
+
+
+<div class="container mt-5">
+        <h2 class="text-center mb-4">Caregiver Dashboard</h2>
+
+        <?php if (session()->getFlashdata('message')): ?>
+        <div class="alert alert-success" id="flashMessage">
+            <?= session()->getFlashdata('message') ?>
+        </div>
+
+        <script>
+            // Wait for 3 seconds (3000ms), then hide the flash message
+            setTimeout(function() {
+                document.getElementById('flashMessage').style.display = 'none';
+            }, 3000);
+        </script>
+        <?php endif; ?>
+
+        
