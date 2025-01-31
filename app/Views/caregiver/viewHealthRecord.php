@@ -56,7 +56,7 @@
                                     </a>
                                 </td>
                             </tr>
-                    <!-- Edit Modal -->
+                    <!-- Modal -->
                     <div class="modal fade" id="editModal<?= $record['id'] ?>" tabindex="-1" aria-labelledby="editModalLabel<?= $record['id'] ?>" aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
