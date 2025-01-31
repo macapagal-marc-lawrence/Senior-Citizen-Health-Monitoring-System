@@ -64,5 +64,20 @@
                                             <h5 class="modal-title" id="editModalLabel<?= $record['id'] ?>">Edit Health Record</h5>
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
-                  
+                                        <form action="/updateRecord/<?= $record['id'] ?>" method="post">
+                                            <input type="hidden" name="id" value="<?= esc($record['id']) ?>">
+                                            <div class="modal-body">
+                                                <?= csrf_field() ?>
+                                                <div class="mb-3">
+                                                    <label for="health_condition" class="form-label">Health Condition</label>
+                                                    <input type="text" class="form-control" name="health_condition" value="<?= esc($record['health_condition']) ?>" required>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="description" class="form-label">Description</label>
+                                                    <input type="text" class="form-control" name="description" value="<?= esc($record['description']) ?>" required>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="temperature" class="form-label">Temperature</label>
+                                                    <input type="text" class="form-control" name="temperature" value="<?= esc($record['temperature']) ?>" required>
+                                                </div>
 </div>
