@@ -201,3 +201,152 @@ WHERE `email` = :email:
 12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
 14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Senior-Citizen-Health-Monitoring-System\\public\\index.php')
+CRITICAL - 2025-01-31 11:37:31 --> Error: Class "App\Models\SeniorCaregiverModel" not found
+[Method: GET, Route: admin/adminDashboard]
+in APPPATH\Controllers\Admin.php on line 25.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Admin->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Senior-Citizen-Health-Monitoring-System\\public\\index.php')
+CRITICAL - 2025-01-31 11:38:19 --> Error: Class "App\Controllers\SeniorCaregiverModel" not found
+[Method: GET, Route: admin/adminDashboard]
+in APPPATH\Controllers\Admin.php on line 20.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Admin->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Senior-Citizen-Health-Monitoring-System\\public\\index.php')
+CRITICAL - 2025-01-31 11:38:41 --> Error: Class "App\Controllers\SeniorCaregiverModel" not found
+[Method: GET, Route: admin/adminDashboard]
+in APPPATH\Controllers\Admin.php on line 20.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Admin->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Senior-Citizen-Health-Monitoring-System\\public\\index.php')
+CRITICAL - 2025-01-31 11:38:43 --> Error: Class "App\Controllers\SeniorCaregiverModel" not found
+[Method: GET, Route: admin/adminDashboard]
+in APPPATH\Controllers\Admin.php on line 20.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Admin->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Senior-Citizen-Health-Monitoring-System\\public\\index.php')
+CRITICAL - 2025-01-31 11:39:03 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: admin/adminDashboard]
+in APPPATH\Controllers\Admin.php on line 27.
+ 1 APPPATH\Controllers\Admin.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\laragon\\www\\Senior-Citizen-Health-Monitoring-System\\app\\Controllers\\Admin.php', 27)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->dashboard()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Senior-Citizen-Health-Monitoring-System\\public\\index.php')
+CRITICAL - 2025-01-31 11:39:05 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: admin/adminDashboard]
+in APPPATH\Controllers\Admin.php on line 27.
+ 1 APPPATH\Controllers\Admin.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\laragon\\www\\Senior-Citizen-Health-Monitoring-System\\app\\Controllers\\Admin.php', 27)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->dashboard()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Senior-Citizen-Health-Monitoring-System\\public\\index.php')
+CRITICAL - 2025-01-31 11:39:34 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: admin/adminDashboard]
+in APPPATH\Controllers\Admin.php on line 24.
+ 1 APPPATH\Controllers\Admin.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\laragon\\www\\Senior-Citizen-Health-Monitoring-System\\app\\Controllers\\Admin.php', 24)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->dashboard()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Senior-Citizen-Health-Monitoring-System\\public\\index.php')
+CRITICAL - 2025-01-31 11:40:13 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: admin/adminDashboard]
+in APPPATH\Controllers\Admin.php on line 24.
+ 1 APPPATH\Controllers\Admin.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\laragon\\www\\Senior-Citizen-Health-Monitoring-System\\app\\Controllers\\Admin.php', 24)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->dashboard()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Senior-Citizen-Health-Monitoring-System\\public\\index.php')
+CRITICAL - 2025-01-31 11:40:14 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: admin/adminDashboard]
+in APPPATH\Controllers\Admin.php on line 24.
+ 1 APPPATH\Controllers\Admin.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\laragon\\www\\Senior-Citizen-Health-Monitoring-System\\app\\Controllers\\Admin.php', 24)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->dashboard()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Senior-Citizen-Health-Monitoring-System\\public\\index.php')
+CRITICAL - 2025-01-31 11:40:14 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: admin/adminDashboard]
+in APPPATH\Controllers\Admin.php on line 24.
+ 1 APPPATH\Controllers\Admin.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\laragon\\www\\Senior-Citizen-Health-Monitoring-System\\app\\Controllers\\Admin.php', 24)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->dashboard()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Senior-Citizen-Health-Monitoring-System\\public\\index.php')
+CRITICAL - 2025-01-31 11:40:14 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: admin/adminDashboard]
+in APPPATH\Controllers\Admin.php on line 24.
+ 1 APPPATH\Controllers\Admin.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\laragon\\www\\Senior-Citizen-Health-Monitoring-System\\app\\Controllers\\Admin.php', 24)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->dashboard()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Senior-Citizen-Health-Monitoring-System\\public\\index.php')
+CRITICAL - 2025-01-31 11:40:14 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: admin/adminDashboard]
+in APPPATH\Controllers\Admin.php on line 24.
+ 1 APPPATH\Controllers\Admin.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\laragon\\www\\Senior-Citizen-Health-Monitoring-System\\app\\Controllers\\Admin.php', 24)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->dashboard()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Senior-Citizen-Health-Monitoring-System\\public\\index.php')
+CRITICAL - 2025-01-31 11:40:30 --> ErrorException: Undefined variable $userId
+[Method: GET, Route: admin/adminDashboard]
+in APPPATH\Controllers\Admin.php on line 26.
+ 1 APPPATH\Controllers\Admin.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $userId', 'C:\\laragon\\www\\Senior-Citizen-Health-Monitoring-System\\app\\Controllers\\Admin.php', 26)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->dashboard()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Senior-Citizen-Health-Monitoring-System\\public\\index.php')
+CRITICAL - 2025-01-31 12:01:42 --> Error: Class "App\Models\SeniorCaregiverModel" not found
+[Method: GET, Route: admin/adminDashboard]
+in APPPATH\Controllers\Admin.php on line 25.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Admin->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Senior-Citizen-Health-Monitoring-System\\public\\index.php')

@@ -6,7 +6,7 @@ use CodeIgniter\Model;
 
 class UserModel extends Model
 {
-    protected $table      = 'health monitoring';
+    protected $table      = 'users';
     protected $primaryKey = 'id';
     protected $useTimestamps = true;
 
