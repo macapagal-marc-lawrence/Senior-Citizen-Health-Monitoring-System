@@ -16,4 +16,17 @@
         border-right: 1px solid #cbd5e0;
         z-index: 100;
      }
+     .sidebar:hover {
+        width: 220px;
+    }
+    .sidebar .nav-link {
+        font-size: 1rem;
+        color: #4a5568;
+        padding: 15px 20px;
+        display: flex;
+        align-items: center;
+        border-radius: 6px;
+        margin: 5px 0;
+        transition: background-color 0.3s, color 0.3s;
+    }
 </style>
