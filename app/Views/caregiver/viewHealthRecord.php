@@ -89,4 +89,25 @@
                                                     <input type="text" class="form-control" name="heart_rate" value="<?= esc($record['heart_rate']) ?>" required>
                                                 </div>
                                             </div>  
+
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                <button type="submit" class="btn btn-primary">Save changes</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php endforeach; ?>
+                    </tbody>
+                </table>
+            <?php else: ?>
+                <p>No health records found.</p>
+            <?php endif; ?>
+        </div>
+
+
+         <!-- Medication Records -->
+         <div class="col-md-12 table-responsive mt-5">  
+            <h4 class="text-primary">Medication Records</h4>
 </div>
