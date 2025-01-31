@@ -37,5 +37,25 @@
                             <th style="width: 15%;">Actions</th>
                         </tr>
                     </thead>
+
+                    <tbody>
+                        <?php foreach ($healthRecords as $record): ?>
+                            <tr class="table-row-hover">
+                                <td><?= htmlspecialchars($record['health_condition']) ?></td>
+                                <td><?= htmlspecialchars($record['description']) ?></td>
+                                <td><?= htmlspecialchars($record['temperature']) ?> °C</td>
+                                <td><?= htmlspecialchars($record['blood_pressure']) ?> mmHg</td>
+                                <td><?= htmlspecialchars($record['heart_rate']) ?> bpm</td>
+                                <td><?= date('F j, Y, g:i a', strtotime($record['record_date'])) ?></td>
+                                <td>
+                                    <button class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#editModal<?= $record['id'] ?>">
+                                        <i class="fas fa-edit"></i> Edit
+                                    </button>
+                                    <a href="/deleteRecord/<?= $record['id'] ?>" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this?')">
+                                        <i class="fas fa-trash-alt"></i> Delete
+                                    </a>
+                                </td>
+                            </tr>
+
                   
 </div>
