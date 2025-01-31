@@ -132,3 +132,13 @@
             <div class="table-responsive">
                 <table class="table table-hover table-bordered align-middle">
                     <thead class="table-primary">
+                    <tr>
+                            <th>#</th>
+                            <th>Senior Citizen Name</th>
+                            <th>Health Condition</th>
+                            <th>Description</th>
+                            <th>Temperature</th>
+                            <th>Blood Pressure</th>
+                            <th>Heart Rate</th>
+                            <th>Report Date</th>
+                        </tr>
