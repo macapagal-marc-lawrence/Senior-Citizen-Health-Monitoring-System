@@ -98,6 +98,28 @@
             </div>
         <?php endif; ?>
 
+        <form action="/saveCaregiverAssignment" method="post">
+            <? csrf_field() ?>
+
+            <input type="hidden" name="senior_id" value="<?= esc($senior['id']) ?>">
+
+            <div class="form-group mb3">
+                <label for="senior_name"><i class="bi bi-person-badge icon"></i>Senior Citizen:</label>
+                <input type="text" class="form-control" id="senior_name" value="<?= esc($senior['name']) ?>" disabled>
+            </div>
+
+            
+            <div class="form-group mb-3">
+                <label for="caregiver_id"><i class="bi bi-person-heart icon"></i>Select Caregiver:</label>
+                <select name="caregiver_id" id="caregiver_id" class="form-control" required>
+                    <option value="">Select a caregiver</option>
+                    <?php foreach ($caregivers as $caregiver): ?>
+                        <option value="<?= esc($caregiver['id']) ?>"><?= esc($caregiver['name']) ?></option>
+                    <?php endforeach; ?>
+                </select>
+            </div>
+        </form>
+
     </div>
 
 </div>
