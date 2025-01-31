@@ -46,4 +46,15 @@
     .sidebar:hover .nav-link i {
         transform: scale(1.1);
     }
+
+    .main-content {
+        margin-left: 70px;
+        padding: 20px;
+        transition: margin-left 0.3s;
+        background-color: #f7fafc;
+        min-height: 100vh;
+    }
+    .sidebar:hover ~ .main-content {
+        margin-left: 220px;
+    }
 </style>
