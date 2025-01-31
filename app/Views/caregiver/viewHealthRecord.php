@@ -80,4 +80,13 @@
                                                     <label for="temperature" class="form-label">Temperature</label>
                                                     <input type="text" class="form-control" name="temperature" value="<?= esc($record['temperature']) ?>" required>
                                                 </div>
+                                                <div class="mb-3">
+                                                    <label for="blood_pressure" class="form-label">Blood Pressure</label>
+                                                    <input type="text" class="form-control" name="blood_pressure" value="<?= esc($record['blood_pressure']) ?>" required>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="heart_rate" class="form-label">Heart Rate</label>
+                                                    <input type="text" class="form-control" name="heart_rate" value="<?= esc($record['heart_rate']) ?>" required>
+                                                </div>
+                                            </div>  
 </div>
