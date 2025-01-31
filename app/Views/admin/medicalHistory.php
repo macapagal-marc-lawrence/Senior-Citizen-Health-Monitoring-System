@@ -121,3 +121,31 @@
                 </ul>
             </div>
         </nav>
+        <main class="main-content col-md-9 ms-sm-auto col-lg-10 px-4">
+            <h1 class="h2 text-primary text-center">Health & Medication History</h1>
+            <p class="text-muted text-center">Review Health and Medication History submitted by caregivers for each senior citizen.</p>
+            
+            <div class="table-responsive">
+                <table class="table table-hover table-bordered align-middle">
+                    <thead class="table-primary">
+                    <tr>
+                <th>Senior Name</th>
+                <th>Medication Name</th>
+                <th>Prescribed By</th>
+                <th>Dosage</th>
+                <th>Date Prescribed</th>
+                   </tr>
+                    </thead>
+                    <tbody>
+                    <?php foreach ($medicationHistory as $history): ?>
+                <tr>
+                    <td><?= esc($history['senior_name']) ?></td>
+                    <td><?= esc($history['medication_name']) ?></td>
+                    <td><?= esc($history['prescribed_by_name']) ?></td>
+                    <td><?= esc($history['dosage']) ?></td>
+                    <td><?= esc($history['date_prescribed']) ?></td>
+                </tr>
+            <?php endforeach; ?>
+                    </tbody>
+                </table>
+            </div>
