@@ -46,4 +46,43 @@
     .sidebar:hover .nav-link i {
         transform: scale(1.1);
     }
+
+    .main-content {
+        margin-left: 70px;
+        padding: 20px;
+        transition: margin-left 0.3s;
+        background-color: #f7fafc;
+        min-height: 100vh;
+    }
+    .sidebar:hover ~ .main-content {
+        margin-left: 220px;
+    }
+
+    .card {
+        background: #ffffff;
+        border: none;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .table-primary {
+        background-color: #f0f4f8;
+        color: #2a4365;
+    }
+    .table-hover tbody tr:hover {
+        background-color: #e3e7ea;
+    }
+
+    .table-responsive {
+        margin-top: 20px;
+    }
+    .icon {
+        margin-right: 8px;
+        
+    }
 </style>
