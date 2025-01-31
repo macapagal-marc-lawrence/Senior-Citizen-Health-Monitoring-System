@@ -103,7 +103,7 @@
             }, 3000);
         </script>
         <?php endif; ?>
-        
+
         <form action="/admin/saveCaregiverChange/<?= $senior['id'] ?>" method="post">
             <?= csrf_field() ?>
 
@@ -113,5 +113,29 @@
                 <label for="current_caregiver"><i class="bi bi-person-heart icon"></i>Current Caregiver:</label>
                 <input type="text" class="form-control" id="current_caregiver" value="<?= esc($currentCaregiver['name'] ?? 'None Assigned') ?>" disabled>
             </div>
+
+            <div class="form-group mb-3">
+                <label for="caregiver_id"><i class="bi bi-person-heart icon"></i>Select New Caregiver:</label>
+                <select name="caregiver_id" id="caregiver_id" class="form-control" required>
+                    <option value="">Select a caregiver</option>
+                    <?php foreach ($caregivers as $caregiver): ?>
+                        <option value="<?= esc($caregiver['id']) ?>" <?= isset($currentCaregiver) && $currentCaregiver['caregiver_id'] == $caregiver['id'] ? 'selected' : '' ?>>
+                            <?= esc($caregiver['name']) ?>
+                        </option>
+                    <?php endforeach; ?>
+                </select>
+            </div>
+
+            <div class="d-flex justify-content-between mt-4">
+                <button type="submit" class="btn btn-success">
+                    <i class="bi bi-check-circle-fill icon"></i>Save Changes
+                </button>
+                <a href="<?= site_url('/admin/adminDashboard') ?>" class="btn btn-primary">
+                    <i class="bi bi-arrow-left-circle icon"></i>Back to Dashboard
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
 
 <?= $this->endSection() ?>
