@@ -110,4 +110,17 @@
          <!-- Medication Records -->
          <div class="col-md-12 table-responsive mt-5">  
             <h4 class="text-primary">Medication Records</h4>
+            <?php if (count($medications) > 0): ?>
+                <table class="table table-striped table-bordered table-sm">
+                    <thead class="thead-light">
+                        <tr>
+                            <th style="width: 20%;">Medication Name</th>
+                            <th style="width: 15%;">Dosage</th>
+                            <th style="width: 15%;">Frequency</th>
+                            <th style="width: 15%;">Start Date</th>
+                            <th style="width: 15%;">End Date</th>
+                            <th style="width: 10%;">Recorded At</th>
+                            <th style="width: 10%;">Actions</th>
+                        </tr>
+                    </thead>
 </div>
