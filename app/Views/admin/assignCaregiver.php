@@ -28,4 +28,45 @@
         color: #4a5568;
         font-weight: 500;
     }
+
+    .form-control {
+        border-radius: 6px;
+        border: 1px solid #cbd5e0;
+        padding: 0.75rem;
+        transition: box-shadow 0.2s, border-color 0.2s;
+    }
+
+    .form-control:focus {
+        box-shadow: 0 0 5px rgba(66, 153, 225, 0.3);
+        border-color: #63b3ed;
+    }
+
+    .btn-success {
+        background-color: #48bb78;
+        border-color: #48bb78;
+        color: #fff;
+        transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .btn-success:hover {
+        background-color: #38a169;
+        transform: scale(1.05);
+    }
+
+    .btn-primary {
+        background-color: #4299e1;
+        border-color: #4299e1;
+        color: #fff;
+        transition: background-color 0.3s, transform 0.3s;
+    }
+    .btn-primary:hover {
+        background-color: #3182ce;
+        transform: scale(1.05);
+    }
+
+    .icon {
+        margin-right: 8px;
+        color: #4a5568;
+    }
+    
 </style>
