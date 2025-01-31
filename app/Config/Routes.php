@@ -13,3 +13,5 @@ use CodeIgniter\Router\RouteCollection;
 
 // Admin dashboard route
 $routes->get('/admin/adminDashboard', 'Admin::dashboard');
+// CareGiver dashboard route
+$routes->get('/caregiver/caregiverDashboard', 'Caregiver::dashboard');
