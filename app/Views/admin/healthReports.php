@@ -142,3 +142,16 @@
                             <th>Heart Rate</th>
                             <th>Report Date</th>
                         </tr>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($healthReports as $report): ?>
+                        <tr>
+                            <td><?= $report['id'] ?></td>
+                            <td><?= esc($report['senior_name']) ?></td>
+                            <td><?= esc($report['health_condition']) ?></td>
+                            <td><?= esc($report['description']) ?></td>
+                            <td><?= esc($report['temperature']) ?> °C</td>
+                            <td><?= esc($report['blood_pressure']) ?> mmHg</td>
+                            <td><?= esc($report['heart_rate']) ?> bpm</td>
+                            <td><?= date('F j, Y, g:i a', strtotime($report['record_date'])) ?></td>
+                        </tr>
