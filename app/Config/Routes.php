@@ -26,6 +26,9 @@ $routes->post('/admin/saveCaregiverChange/(:num)', 'Admin::saveCaregiverChange/$
 // Admin dashboard route
 $routes->get('/admin/adminDashboard', 'Admin::dashboard');
 $routes->get('/admin/medicationHistory', 'Admin::medicationHistory');
+$routes->get('/admin/medicationReports', 'Admin::medicationReports');
+$routes->get('/admin/healthReports', 'Admin::healthReports');
+$routes->get('/admin/healthHistory', 'Admin::healthHistory');
 
 // CareGiver dashboard route
 $routes->get('/caregiver/caregiverDashboard', 'Caregiver::dashboard');
