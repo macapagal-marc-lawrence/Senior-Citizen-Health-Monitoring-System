@@ -41,6 +41,16 @@ $routes->post('/caregiver/addReminder/(:num)', 'Caregiver::addReminder/$1');
 // Add Medication Record for a specific senior citizen
 $routes->post('/caregiver/addMedication/(:num)', 'Caregiver::addMedication/$1');
 
+//update and delete health record
+$routes->post('/updateRecord/(:num)', 'Caregiver::updateHealthRecord');
+$routes->get('/deleteRecord/(:num)', 'Caregiver::deleteHealthRecord/$1');
+//update and delete medication record
+$routes->post('/updateMed/(:num)', 'Caregiver::updateMedRecord');
+$routes->get('/deleteMed/(:num)', 'Caregiver::deleteMedRecord/$1');
+//delete reminder
+$routes->get('/deleteReminder/(:num)', 'Caregiver::deleteReminder/$1');
+$routes->get('/delMed/(:num)', 'Caregiver::delMed/$1');
+
 // Senior dashboard route
 $routes->get('/senior/seniorDashboard', 'Senior::dashboard');
 
