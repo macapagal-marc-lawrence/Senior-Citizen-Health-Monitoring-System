@@ -129,4 +129,16 @@
                                 <td><?= htmlspecialchars($medication['medication_name']) ?></td>
                                 <td><?= htmlspecialchars($medication['dosage']) ?></td>
                                 <td><?= htmlspecialchars($medication['frequency']) ?></td>
+                                <td><?= date('F j, Y', strtotime($medication['start_date'])) ?></td>
+                                <td><?= date('F j, Y', strtotime($medication['end_date'])) ?></td>
+                                <td><?= date('F j, Y, g:i a', strtotime($medication['created_at'])) ?></td>
+                                <td>
+                                    <button class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#editModalMed<?= $medication['id'] ?>">
+                                        <i class="fas fa-edit"></i> Edit
+                                    </button>
+                                    <a href="/deleteMed/<?= $medication['id'] ?>" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this?')">
+                                        <i class="fas fa-trash-alt"></i> Delete
+                                    </a>
+                                </td>
+                            </tr>
 </div>
