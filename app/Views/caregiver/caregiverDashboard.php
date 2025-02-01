@@ -1,4 +1,197 @@
+<?= $this->extend('layouts/frontend') ?>
 
+<?= $this->section('content') ?>
+
+<style>
+    /* Importing Google Fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+
+    /* Color Palette */
+    :root {
+        --primary-color: #4CAF50;    /* Soft green */
+        --secondary-color: #ff9800;  /* Soft orange */
+        --danger-color: #f44336;     /* Soft red */
+        --info-color: #2196F3;       /* Soft blue */
+        --background-color: #f4f4f4; /* Light grey background */
+        --card-bg-color: #ffffff;    /* White card background */
+        --table-border-color: #ddd;  /* Light table border */
+        --hover-bg-color: rgba(0, 0, 0, 0.1); /* Hover effect background */
+        --modal-bg-color: #ffffff;   /* Modal background */
+        --btn-text-color: #fff;      /* Button text color */
+    }
+
+    /* General Body Styling */
+    body {
+        background-color: var(--background-color);
+        font-family: 'Roboto', sans-serif;  /* Updated font family */
+        color: #333;
+        line-height: 1.6;
+        font-size: 16px;
+    }
+
+    /* Header and Titles */
+    h1, h2, h3, span {
+        font-family: 'Open Sans', sans-serif;  /* Lighter font for headers */
+        font-weight: 600;  /* Heavier weight for emphasis */
+        color: var(--primary-color);
+    }
+  
+
+    h2 {
+        font-size: 28px;  /* Adjusted size for balance */
+        margin-bottom: 20px;
+    }
+
+    /* Navbar Styling */
+    .navbar {
+        background-color: var(--primary-color);
+    }
+
+    .navbar-brand {
+        color: #fff;
+    }
+
+    .navbar .btn-danger {
+        background-color: var(--danger-color);
+        color: var(--btn-text-color);
+    }
+
+    /* Dashboard Card Hover Effects */
+    .card {
+        border: 1px solid var(--table-border-color);
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        background-color: var(--card-bg-color);
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-title {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;  /* Slightly heavier weight */
+        font-size: 18px;
+        color: #333;
+    }
+
+    .card-title i {
+        margin-right: 8px;
+    }
+
+    /* Button Hover Effects */
+    .btn {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;  /* Medium weight for button text */
+        border-radius: 5px;
+        padding: 8px 15px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .btn:hover {
+        transform: scale(1.05);
+        font-weight: 600;  /* Make button text bolder on hover */
+    }
+
+    .btn-info {
+        background-color: var(--info-color);
+        color: var(--btn-text-color);
+    }
+    /* Container for the Page */
+
+    .btn-info:hover {
+        background-color: #1976D2;
+    }
+
+    .btn-success {
+        background-color: var(--primary-color);
+        color: var(--btn-text-color);
+    }
+
+    .btn-success:hover {
+        background-color: #388E3C;
+    }
+
+    .btn-warning {
+        background-color: var(--secondary-color);
+        color: var(--btn-text-color);
+    }
+
+    .btn-warning:hover {
+        background-color: #f57c00;
+    }
+
+    .btn-danger {
+        background-color: var(--danger-color);
+        color: var(--btn-text-color);
+    }
+
+    .btn-danger:hover {
+        background-color: #d32f2f;
+    }
+
+    /* Table Hover Effects */
+    .table th {
+        background-color: var(--primary-color);
+        color: #fff;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 600;
+    }
+
+    .table td {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+    }
+
+    .table tr:hover {
+        background-color: var(--hover-bg-color);
+    }
+
+    /* Modal Styling */
+    .modal-content {
+        background-color: var(--modal-bg-color);
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .modal-header {
+        background-color: var(--primary-color);
+        color: #fff;
+        border-radius: 8px 8px 0 0;
+    }
+
+    .modal-header h5 {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 600;
+    }
+
+    .modal-footer {
+        background-color: var(--card-bg-color);
+    }
+
+    /* Flash message styling */
+    #flashMessage {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        animation: fadeOut 3s forwards;
+    }
+
+    @keyframes fadeOut {
+        0% { opacity: 1; }
+        90% { opacity: 1; }
+        100% { opacity: 0; }
+    }
+
+    /* Form Labels */
+    .form-label {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;  /* Regular weight for labels */
+    }
+</style>
 
 <!-- Header Section with Logout Button -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
