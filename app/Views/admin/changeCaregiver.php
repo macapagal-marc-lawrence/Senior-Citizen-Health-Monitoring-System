@@ -1,9 +1,10 @@
 <?= $this->extend('layouts/frontend') ?>
 
-<?= $this->section('section')?>
+<?= $this->section('content') ?>
+
 <style>
     .container {
-        margin-top 5%;
+        margin-top: 5%;
     }
 
     .card {
@@ -78,15 +79,18 @@
     }
 </style>
 
+
 <div class="container">
     <div class="card shadow-lg">
         <h2 class="text-center mb-4"><i class="bi bi-people-fill icon"></i>Change Caregiver for <?= esc($senior['name']) ?></h2>
 
+        <!-- Flash Message -->
         <?php if (session()->getFlashdata('error')): ?>
         <div class="alert alert-danger" id="flashMessage">
             <?= session()->getFlashdata('error') ?>
         </div>
         <script>
+            // Wait for 3 seconds (3000ms), then hide the flash message
             setTimeout(function() {
                 document.getElementById('flashMessage').style.display = 'none';
             }, 3000);
