@@ -3,6 +3,7 @@
 <?= $this->section('content') ?>
 
 <style>
+    /* Sidebar Styling */
     .sidebar {
         width: 70px;
         background: rgba(233, 244, 248, 0.9);
@@ -16,11 +17,9 @@
         border-right: 1px solid #cbd5e0;
         z-index: 100;
     }
-
-    .sidebar:hover{
-        width: 220%;
+    .sidebar:hover {
+        width: 220px;
     }
-
     .sidebar .nav-link {
         font-size: 1rem;
         color: #4a5568;
@@ -31,28 +30,25 @@
         margin: 5px 0;
         transition: background-color 0.3s, color 0.3s;
     }
-
     .sidebar .nav-link:hover {
-        color: #2b6cb0
+        color: #2b6cb0;
         background-color: rgba(66, 153, 225, 0.15);
     }
-
     .sidebar .nav-link.active {
         background-color: rgba(66, 153, 225, 0.2);
         color: #2c5282;
         font-weight: bold;
     }
-
     .sidebar .nav-link i {
         font-size: 1.2rem;
         margin-right: 10px;
         transition: transform 0.3s;
     }
-
     .sidebar:hover .nav-link i {
         transform: scale(1.1);
     }
 
+    /* Main Content */
     .main-content {
         margin-left: 70px;
         padding: 20px;
@@ -64,6 +60,7 @@
         margin-left: 220px;
     }
 
+    /* Card Styling */
     .card {
         background: #ffffff;
         border: none;
@@ -76,6 +73,7 @@
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     }
 
+    /* Table Styling */
     .table-primary {
         background-color: #f0f4f8;
         color: #2a4365;
@@ -96,7 +94,8 @@
 
 <div class="container-fluid">
     <div class="row">
-    <nav class="sidebar">
+        <!-- Sidebar -->
+        <nav class="sidebar">
             <div class="sidebar-sticky p-3">
                 <ul class="nav flex-column">
                     <li class="nav-item mb-3">
@@ -128,15 +127,16 @@
             </div>
         </nav>
 
+        <!-- Main Content -->
         <main class="main-content col-md-9 ms-sm-auto col-lg-10 px-4">
             <h1 class="h2 text-primary text-center">Medication Reports</h1>
-        <p class="text-muted text-center">Review Medication data submitted by caregivers for each senior citizen.</p>
-        
-        <div class="table-responsive">
-            <table class="table table-hover table-bordered align-middle">
-                <thead class="table-primary">
-                    <tr>
-                    <th>#</th>
+            <p class="text-muted text-center">Review Medication data submitted by caregivers for each senior citizen.</p>
+            
+            <div class="table-responsive">
+                <table class="table table-hover table-bordered align-middle">
+                    <thead class="table-primary">
+                        <tr>
+                            <th>#</th>
                             <th>Senior Citizen Name</th>
                             <th>Medication Name</th>
                             <th>Dosage</th>
@@ -144,10 +144,10 @@
                             <th>Start Date</th>
                             <th>End Date</th>
                             <th>Record Date</th>
-                    </tr>
-                </thead>
-                <tbody>
-                <?php foreach ($medicationReports as $report): ?>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($medicationReports as $report): ?>
                         <tr>
                         <td><?= $report['id'] ?></td>
                         <td><?= esc($report['senior_name']) ?></td>
@@ -159,11 +159,11 @@
                                 <td><?= date('F j, Y, g:i a', strtotime($report['created_at'])) ?></td>
                         </tr>
                         <?php endforeach; ?>
-                </tbody>
-            </table>    
-        </div>
+                    </tbody>
+                </table>
+            </div>
 
-        <div class="mt-3">
+            <div class="mt-3">
                 <a href="/admin/adminDashboard" class="btn btn-primary">
                 <i class="bi bi-arrow-left-circle icon"></i>Back to Dashboard</a>
             </div>
