@@ -142,5 +142,118 @@
         </div>
     </div>
 
+    <div class="card shadow-sm mb-4">
+        <div class="card-header bg-info text-white">
+            <h5 class="card-title" style="font-size: 1.5rem;">Medications</h5>
+        </div>
+        <div class="card-body">
+            <h6 style="font-size: 1.25rem;">Summary of Current Medications</h6>
+            <?php if (count($medications) > 0): ?>
+                <p><strong>Next Medication:</strong> <?= esc($medications[0]['medication_name']) ?> - <?= esc($medications[0]['dosage']) ?></p>
+            <table class="table table-bordered table-striped">
+                <thead class="thead-dark">
+                    <tr>
+                        <th style="font-size: 1.2rem;">Medication Name</th>
+                        <th style="font-size: 1.2rem;">Dosage</th>
+                        <th style="font-size: 1.2rem;">Frequency</th>
+                        <th style="font-size: 1.2rem;">Start Date</th>
+                        <th style="font-size: 1.2rem;">End Date</th>
+                        <th style="font-size: 1.2rem;">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach ($medications as $medication): ?>
+                        <tr>
+                            <td style="font-size: 1.2rem;"><?= esc($medication['medication_name']) ?></td>
+                            <td style="font-size: 1.2rem;"><?= esc($medication['dosage']) ?></td>
+                            <td style="font-size: 1.2rem;"><?= esc($medication['frequency']) ?></td>
+                            <td style="font-size: 1.2rem;"><?= esc($medication['start_date']) ?></td>
+                            <td style="font-size: 1.2rem;"><?= esc($medication['end_date'] ?? 'Ongoing') ?></td>
+                            <td>
+                            <a href="/deleteMed/<?= $medication['id'] ?>" class="btn btn-success btn-sm">Marked as Done</a>
+                            </td>
+                        </tr>
+                    <?php endforeach; ?> 
+                </tbody>
+            </table>
+            <?php else: ?>
+            <p>No medications prescribed yet.</p>
+            <?php endif; ?>
+        </div>
+    </div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    const healthRecords = <?= json_encode($healthRecords) ?>;
+
+    const dates = healthRecords.map(record => record.record_date);
+    const bloodPressure = healthRecords.map(record => parseFloat(record.blood_pressure));
+    const heartRate = healthRecords.map(record => parseFloat(record.heart_rate));
+    const temperature = healthRecords.map(record => parseFloat(record.temperature));
+
+    
+    new Chart(document.getElementById('bloodPressureChart'), {
+        type: 'line',
+        data: {
+            labels: dates,
+            datasets: [{
+                label: 'Blood Pressure',
+                data: bloodPressure,
+                borderColor: 'rgb(75, 192, 192)',
+                fill: false,
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: { position: 'top' },
+                title: { display: true, text: 'Blood Pressure Over Time' }
+            }
+        }
+    });
+
+    new Chart(document.getElementById('heartRateChart'), {
+        type: 'line',
+        data: {
+            labels: dates,
+            datasets: [{
+                label: 'Heart Rate',
+                data: heartRate,
+                borderColor: 'rgb(255, 99, 132)',
+                fill: false,
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: { position: 'top' },
+                title: { display: true, text: 'Heart Rate Over Time' }
+            }
+        }
+    });
+
+    new Chart(document.getElementById('temperatureChart'), {
+        type: 'line',
+        data: {
+            labels: dates,
+            datasets: [{
+                label: 'Temperature',
+                data: temperature,
+                borderColor: 'rgb(54, 162, 235)',
+                fill: false,
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: { position: 'top' },
+                title: { display: true, text: 'Temperature Over Time' }
+            }
+        }
+    });
+</script>
+
+
 </div>
 <?= $this->endSection() ?>
