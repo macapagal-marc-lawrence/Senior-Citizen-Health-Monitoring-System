@@ -22,6 +22,9 @@ $routes->get('/admin/rejectUser/(:num)', 'Admin::rejectUser/$1'); //rejecting us
 $routes->get('/admin/assignCaregiver/(:num)', 'Admin::assignCaregiver/$1');
 $routes->get('/admin/changeCaregiver/(:num)', 'Admin::changeCaregiver/$1');
 $routes->post('/admin/saveCaregiverChange/(:num)', 'Admin::saveCaregiverChange/$1');
+$routes->get('/admin/assignCaregiver/(:num)', 'Admin::assignCaregiver/$1');
+$routes->post('/saveCaregiverAssignment', 'Admin::saveCaregiverAssignment');
+
 
 // Admin dashboard route
 $routes->get('/admin/adminDashboard', 'Admin::dashboard');
