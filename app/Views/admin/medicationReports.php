@@ -36,8 +36,47 @@
             </div>
         </nav>
 
-    </div>
+        <main class="main-content col-md-9 ms-sm-auto col-lg-10 px-4">
+            <h1 class="h2 text-primary text-center">Medication Reports</h1>
+        <p class="text-muted text-center">Review Medication data submitted by caregivers for each senior citizen.</p>
+        
+        <div class="table-responsive">
+            <table class="table table-hover table-bordered align-middle">
+                <thead class="table-primary">
+                    <tr>
+                    <th>#</th>
+                            <th>Senior Citizen Name</th>
+                            <th>Medication Name</th>
+                            <th>Dosage</th>
+                            <th>Frequency</th>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                            <th>Record Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <?php foreach ($medicationReports as $report): ?>
+                        <tr>
+                        <td><?= $report['id'] ?></td>
+                        <td><?= esc($report['senior_name']) ?></td>
+                        <td><?= htmlspecialchars($report['medication_name']) ?></td>
+                                <td><?= htmlspecialchars($report['dosage']) ?></td>
+                                <td><?= htmlspecialchars($report['frequency']) ?></td>
+                                <td><?= date('F j, Y', strtotime($report['start_date'])) ?></td>
+                                <td><?= date('F j, Y', strtotime($report['end_date'])) ?></td>
+                                <td><?= date('F j, Y, g:i a', strtotime($report['created_at'])) ?></td>
+                        </tr>
+                        <?php endforeach; ?>
+                </tbody>
+            </table>    
+        </div>
 
+        <div class="mt-3">
+                <a href="/admin/adminDashboard" class="btn btn-primary">
+                <i class="bi bi-arrow-left-circle icon"></i>Back to Dashboard</a>
+            </div>
+        </main>
+    </div>
 </div>
 
 <?= $this->endSection() ?>
