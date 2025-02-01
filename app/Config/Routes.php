@@ -18,6 +18,11 @@ $routes->post('/admin/addUser', 'Admin::addUser'); //add user
 $routes->get('/admin/approveUser/(:num)', 'Admin::approveUser/$1'); // approving user
 $routes->get('/admin/rejectUser/(:num)', 'Admin::rejectUser/$1'); //rejecting user
 
+//Assigning, changing, saving caregiver
+$routes->get('/admin/assignCaregiver/(:num)', 'Admin::assignCaregiver/$1');
+$routes->get('/admin/changeCaregiver/(:num)', 'Admin::changeCaregiver/$1');
+$routes->post('/admin/saveCaregiverChange/(:num)', 'Admin::saveCaregiverChange/$1');
+
 // Admin dashboard route
 $routes->get('/admin/adminDashboard', 'Admin::dashboard');
 $routes->get('/admin/medicationHistory', 'Admin::medicationHistory');
