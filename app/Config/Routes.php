@@ -32,5 +32,15 @@ $routes->get('/admin/healthHistory', 'Admin::healthHistory');
 
 // CareGiver dashboard route
 $routes->get('/caregiver/caregiverDashboard', 'Caregiver::dashboard');
+// View Health Records for a specific senior citizen
+$routes->get('/caregiver/viewHealthRecords/(:num)', 'Caregiver::viewHealthRecords/$1');
+// Add Health Record for a specific senior citizen
+$routes->post('/caregiver/addHealthRecord/(:num)', 'Caregiver::addHealthRecord/$1');
+// Add Health Record for a specific senior citizen
+$routes->post('/caregiver/addReminder/(:num)', 'Caregiver::addReminder/$1');
+// Add Medication Record for a specific senior citizen
+$routes->post('/caregiver/addMedication/(:num)', 'Caregiver::addMedication/$1');
+
 // Senior dashboard route
 $routes->get('/senior/seniorDashboard', 'Senior::dashboard');
+
