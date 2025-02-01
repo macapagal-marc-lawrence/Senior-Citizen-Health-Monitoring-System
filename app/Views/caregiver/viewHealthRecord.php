@@ -151,4 +151,59 @@
                                             <h5 class="modal-title" id="editModalLabelMed<?= $medication['id'] ?>">Edit Medication Record</h5>
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
+
+                                        <form action="/updateMed/<?= $medication['id'] ?>" method="post">
+                                            <input type="hidden" name="id" value="<?= esc($medication['id']) ?>">
+                                            <div class="modal-body">
+                                                <?= csrf_field() ?>
+                                                <div class="mb-3">
+                                                    <label for="medication_name" class="form-label">Medication Name</label>
+                                                    <input type="text" class="form-control" name="medication_name" value="<?= esc($medication['medication_name']) ?>" required>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="dosage" class="form-label">Dosage</label>
+                                                    <input type="text" class="form-control" name="dosage" value="<?= esc($medication['dosage']) ?>" required>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="frequency" class="form-label">Frequency</label>
+                                                    <input type="text" class="form-control" name="frequency" value="<?= esc($medication['frequency']) ?>" required>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="start_date" class="form-label">Start Date</label>
+                                                    <input type="date" class="form-control" name="start_date" value="<?= esc($medication['start_date']) ?>" required>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="end_date" class="form-label">End Date</label>
+                                                    <input type="date" class="form-control" name="end_date" value="<?= esc($medication['end_date']) ?>" required>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                <button type="submit" class="btn btn-primary">Save changes</button>
+                                            </div>
+                                        </form>
+
+                                        </div>
+                                </div>
+                            </div>
+                        <?php endforeach; ?>
+                    </tbody>
+                </table>
+            <?php else: ?>
+                <p>No medication records found.</p>
+            <?php endif; ?>
+        </div>
+    </div>
+    <div class="mt-3">
+    <a href="<?= site_url('/caregiver/caregiverDashboard') ?>" class="btn btn-primary btn-lg">
+        <i class="bi bi-arrow-left-circle"></i> Back to Dashboard
+    </a>
+</div>
+
+
+
+
+<?= $this->endSection() ?>
+
+
 </div>
