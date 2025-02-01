@@ -155,3 +155,17 @@
                             <td><?= esc($report['heart_rate']) ?> bpm</td>
                             <td><?= date('F j, Y, g:i a', strtotime($report['record_date'])) ?></td>
                         </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="mt-3">
+                <a href="/admin/adminDashboard" class="btn btn-primary">
+                <i class="bi bi-arrow-left-circle icon"></i>Back to Dashboard</a>
+            </div>
+        </main>
+    </div>
+</div>
+
+<?= $this->endSection() ?>
