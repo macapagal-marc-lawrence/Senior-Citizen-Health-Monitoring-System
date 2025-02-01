@@ -32,3 +32,5 @@ $routes->get('/admin/healthHistory', 'Admin::healthHistory');
 
 // CareGiver dashboard route
 $routes->get('/caregiver/caregiverDashboard', 'Caregiver::dashboard');
+// Senior dashboard route
+$routes->get('/senior/seniorDashboard', 'Senior::dashboard');
