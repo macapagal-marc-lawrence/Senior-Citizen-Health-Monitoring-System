@@ -193,6 +193,7 @@
     }
 </style>
 
+
 <!-- Header Section with Logout Button -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
@@ -209,14 +210,13 @@
 </nav>
 
 
-<div class="container mt-5">
+    <div class="container mt-5">
         <h2 class="text-center mb-4">Caregiver Dashboard</h2>
 
         <?php if (session()->getFlashdata('message')): ?>
         <div class="alert alert-success" id="flashMessage">
             <?= session()->getFlashdata('message') ?>
         </div>
-
         <script>
             // Wait for 3 seconds (3000ms), then hide the flash message
             setTimeout(function() {
@@ -225,8 +225,8 @@
         </script>
         <?php endif; ?>
 
-         <!-- Dashboard Summary Section -->
-         <div class="row mb-4">
+        <!-- Dashboard Summary Section -->
+        <div class="row mb-4">
         <!-- Assigned Seniors Card -->
         <div class="col-md-4">
             <div class="card">
@@ -238,15 +238,36 @@
                             <i class="fas fa-chevron-down"></i>
                         </button>
                     </h5>
-
-                     <!-- Dropdown content -->
-                     <div class="collapse" id="assignedSeniors">
+                    <!-- Dropdown content -->
+                    <div class="collapse" id="assignedSeniors">
                         <p class="card-text"><?= count($seniors) ?> Seniors</p>
                     </div>
                 </div>
             </div>
         </div>
-             <!-- Pending Reminders Card -->
+
+        <!-- Pending Medications Card -->
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <i class="fas fa-pills"></i> Pending Medications
+                        <!-- Dropdown toggle button -->
+                        <button class="btn btn-link" type="button" data-bs-toggle="collapse" data-bs-target="#pendingMedications" aria-expanded="false" aria-controls="pendingMedications">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </h5>
+                    <!-- Dropdown content -->
+                    <div class="collapse" id="pendingMedications">
+                        <?php foreach ($seniors as $senior): ?>
+                            <p class="card-text"><?= count($medications[$senior['id']]) ?> Medications for <?= esc($senior['name']) ?></p>
+                        <?php endforeach; ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pending Reminders Card -->
         <div class="col-md-4">
             <div class="card">
                 <div class="card-body">
@@ -431,6 +452,3 @@
 </div>
 
 <?= $this->endSection() ?>
-
-
-        
