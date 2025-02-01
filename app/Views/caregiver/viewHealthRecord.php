@@ -123,4 +123,10 @@
                             <th style="width: 10%;">Actions</th>
                         </tr>
                     </thead>
+                    <tbody>
+                        <?php foreach ($medications as $medication): ?>
+                            <tr class="table-row-hover">
+                                <td><?= htmlspecialchars($medication['medication_name']) ?></td>
+                                <td><?= htmlspecialchars($medication['dosage']) ?></td>
+                                <td><?= htmlspecialchars($medication['frequency']) ?></td>
 </div>
