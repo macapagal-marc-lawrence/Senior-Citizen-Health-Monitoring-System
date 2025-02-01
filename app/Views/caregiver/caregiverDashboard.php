@@ -32,4 +32,27 @@
         </script>
         <?php endif; ?>
 
+         <!-- Dashboard Summary Section -->
+         <div class="row mb-4">
+        <!-- Assigned Seniors Card -->
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <i class="fas fa-users"></i> Assigned Seniors
+                        <!-- Dropdown toggle button -->
+                        <button class="btn btn-link" type="button" data-bs-toggle="collapse" data-bs-target="#assignedSeniors" aria-expanded="false" aria-controls="assignedSeniors">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </h5>
+
+                     <!-- Dropdown content -->
+                     <div class="collapse" id="assignedSeniors">
+                        <p class="card-text"><?= count($seniors) ?> Seniors</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
         
