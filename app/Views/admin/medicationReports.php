@@ -16,9 +16,11 @@
         border-right: 1px solid #cbd5e0;
         z-index: 100;
     }
-    .sidebar:hover {
-        width: 220px;
+
+    .sidebar:hover{
+        width: 220%;
     }
+
     .sidebar .nav-link {
         font-size: 1rem;
         color: #4a5568;
@@ -29,23 +31,28 @@
         margin: 5px 0;
         transition: background-color 0.3s, color 0.3s;
     }
+
     .sidebar .nav-link:hover {
-        color: #2b6cb0;
+        color: #2b6cb0
         background-color: rgba(66, 153, 225, 0.15);
     }
+
     .sidebar .nav-link.active {
         background-color: rgba(66, 153, 225, 0.2);
         color: #2c5282;
         font-weight: bold;
     }
+
     .sidebar .nav-link i {
         font-size: 1.2rem;
         margin-right: 10px;
         transition: transform 0.3s;
     }
+
     .sidebar:hover .nav-link i {
         transform: scale(1.1);
     }
+
     .main-content {
         margin-left: 70px;
         padding: 20px;
@@ -57,7 +64,6 @@
         margin-left: 220px;
     }
 
-    /* Card Styling */
     .card {
         background: #ffffff;
         border: none;
@@ -69,6 +75,7 @@
         transform: translateY(-3px);
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     }
+
     .table-primary {
         background-color: #f0f4f8;
         color: #2a4365;
@@ -85,15 +92,11 @@
         margin-right: 8px;
         
     }
-
-</style>
-
 </style>
 
 <div class="container-fluid">
     <div class="row">
-        <!-- Sidebar -->
-        <nav class="sidebar">
+    <nav class="sidebar">
             <div class="sidebar-sticky p-3">
                 <ul class="nav flex-column">
                     <li class="nav-item mb-3">
@@ -102,12 +105,12 @@
                         </a>
                     </li>
                     <li class="nav-item mb-3">
-                        <a class="nav-link active d-flex align-items-center" href="/admin/healthReports">
+                        <a class="nav-link d-flex align-items-center" href="/admin/healthReports">
                             <i class="bi bi-heart"></i> <span>Health Reports</span>
                         </a>
                     </li>
                     <li class="nav-item mb-3">
-                        <a class="nav-link d-flex align-items-center" href="/admin/medicationReports">
+                        <a class="nav-link active d-flex align-items-center" href="/admin/medicationReports">
                             <i class="bi bi-capsule"></i> <span>Medication Reports</span>
                         </a>
                     </li>
@@ -126,41 +129,41 @@
         </nav>
 
         <main class="main-content col-md-9 ms-sm-auto col-lg-10 px-4">
-            <h1 class="h2 text-primary text-center">Health Reports</h1>
-            <p class="text-muted text-center">Review health data submitted by caregivers for each senior citizen.</p>
-
-            <div class="table-responsive">
-                <table class="table table-hover table-bordered align-middle">
-                    <thead class="table-primary">
+            <h1 class="h2 text-primary text-center">Medication Reports</h1>
+        <p class="text-muted text-center">Review Medication data submitted by caregivers for each senior citizen.</p>
+        
+        <div class="table-responsive">
+            <table class="table table-hover table-bordered align-middle">
+                <thead class="table-primary">
                     <tr>
-                            <th>#</th>
+                    <th>#</th>
                             <th>Senior Citizen Name</th>
-                            <th>Health Condition</th>
-                            <th>Description</th>
-                            <th>Temperature</th>
-                            <th>Blood Pressure</th>
-                            <th>Heart Rate</th>
-                            <th>Report Date</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php foreach ($healthReports as $report): ?>
+                            <th>Medication Name</th>
+                            <th>Dosage</th>
+                            <th>Frequency</th>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                            <th>Record Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <?php foreach ($medicationReports as $report): ?>
                         <tr>
-                            <td><?= $report['id'] ?></td>
-                            <td><?= esc($report['senior_name']) ?></td>
-                            <td><?= esc($report['health_condition']) ?></td>
-                            <td><?= esc($report['description']) ?></td>
-                            <td><?= esc($report['temperature']) ?> °C</td>
-                            <td><?= esc($report['blood_pressure']) ?> mmHg</td>
-                            <td><?= esc($report['heart_rate']) ?> bpm</td>
-                            <td><?= date('F j, Y, g:i a', strtotime($report['record_date'])) ?></td>
+                        <td><?= $report['id'] ?></td>
+                        <td><?= esc($report['senior_name']) ?></td>
+                        <td><?= htmlspecialchars($report['medication_name']) ?></td>
+                                <td><?= htmlspecialchars($report['dosage']) ?></td>
+                                <td><?= htmlspecialchars($report['frequency']) ?></td>
+                                <td><?= date('F j, Y', strtotime($report['start_date'])) ?></td>
+                                <td><?= date('F j, Y', strtotime($report['end_date'])) ?></td>
+                                <td><?= date('F j, Y, g:i a', strtotime($report['created_at'])) ?></td>
                         </tr>
                         <?php endforeach; ?>
-                    </tbody>
-                </table>
-            </div>
+                </tbody>
+            </table>    
+        </div>
 
-            <div class="mt-3">
+        <div class="mt-3">
                 <a href="/admin/adminDashboard" class="btn btn-primary">
                 <i class="bi bi-arrow-left-circle icon"></i>Back to Dashboard</a>
             </div>
