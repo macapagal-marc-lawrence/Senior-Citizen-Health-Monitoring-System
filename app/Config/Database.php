@@ -27,9 +27,9 @@ class Database extends Config
     public array $default = [
         'DSN'          => '',
         'hostname'     => 'localhost',
-        'username'     => 'root',
-        'password'     => '',
-        'database'     => 'health monitoring',
+        'username'     => 'u370499532_seniorhealth',
+        'password'     => 'Seniorhealth2025',
+        'database'     => 'u370499532_seniorhealth',
         'DBDriver'     => 'MySQLi',
         'DBPrefix'     => '',
         'pConnect'     => false,
