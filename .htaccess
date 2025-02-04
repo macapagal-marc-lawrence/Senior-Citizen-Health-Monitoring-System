@@ -6,11 +6,9 @@ Options -Indexes
     Options +FollowSymlinks
     RewriteEngine On
 
-    # Set the RewriteBase if your CI project is inside a subfolder
-    # Uncomment and change "/your-subfolder" if needed
-    # RewriteBase /your-subfolder
+    # Since everything is inside public_html, no subfolder setting is needed
 
-    # Redirect Trailing Slashes...
+    # Redirect Trailing Slashes
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_URI} (.+)/$
     RewriteRule ^ %1 [L,R=301]
@@ -19,7 +17,7 @@ Options -Indexes
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 
-    # Send non-existing files and directories to index.php
+    # Redirect all requests to index.php
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule ^(.*)$ index.php/$1 [L,QSA]
