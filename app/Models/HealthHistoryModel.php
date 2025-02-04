@@ -33,7 +33,7 @@ class HealthHistoryModel extends Model
     public function getRecorder($prescribedById)
     {
         return $this->join('users', 'users.id = health_history.recorded_by')
-                    ->where('health_history.recorded_by', $recordedById)
+                    ->where('health_history.recorded_by',   )
                     ->findAll();
     }
 }
